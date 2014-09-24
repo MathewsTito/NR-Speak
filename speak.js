@@ -12,7 +12,7 @@ module.exports = function(RED){
         var node = this;
         this.on('input', function(msg){
             var text = msg.payload;
-            var command = "speech.sh "+text;
+            var command = "./speak.sh "+text;
             function puts(error,stdout,stderr) { sys.puts(stdout) }
             exec(command);
             //say.speak('Tito',text);
